@@ -10,6 +10,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Mainpage />} />
           <Route path='/track' element={<Trackpage />} />
+          <Route path='/' element={<Trackpage />} />
+          <Route path='/main' element={<Mainpage />} />
         </Routes>
       </div>
     </Router>
