@@ -7,11 +7,9 @@ function App() {
   return (
     <Router>
       <div className="bg-gradient-to-r from-teal-800 via-cyan-900 to-cyan-900">
-        <Mainpage />
-        <Trackpage />
         <Routes>
-          <Route exact path='/' component={Mainpage}></Route>
-          <Route path='/track' component={Trackpage}></Route>
+          <Route path='/' element={<Mainpage />} />
+          <Route path='/track' element={<Trackpage />} />
         </Routes>
       </div>
     </Router>

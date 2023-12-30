@@ -16,13 +16,16 @@ import ThreeDots from '../media/ThreeDots.png';
 import GreenPlaybackBG from '../media/GreenPlaybackBG.png';
 import SmallAlbumImg from '../media/SmallAlbumImg.png';
 import PauseBtn from '../media/PauseBtn.png';
+import { Link } from "react-router-dom";
 
 const Header = () => {
 return (
     <div className='py-6 px-6'>
         <div className='h-full w-full'>
             <div className='flex justify-between place-items-center mb-12'>
+            <Link to="/track">
                 <img className='h-[9px] w-[13px] flex place-items-center' src={Downarrow} alt="" />
+            </Link>
                 <img className='w-[24px] rounded-3xl border-[1px] border-[#03DABB]' src={ProfilePic} alt="" />
             </div>
         </div>
