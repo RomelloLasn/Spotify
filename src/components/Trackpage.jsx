@@ -11,14 +11,45 @@ import NextBtn from '../media/NextBtn.png';
 import Heart from '../media/Heart.png';
 import Arrows from '../media/Arrows.png';
 import DownloadBtn from '../media/DownloadBtn.png';
+import SmallAlbumImg from '../media/SmallAlbumImg.png';
+import Mastercard from '../media/Mastercard.png';
+import ShoppingCart from '../media/ShoppingCart.png';
+import LocationSign from '../media/LocationSign.png';
+import Burger from '../media/Burger.png';
+import Plane from '../media/Plane.png';
+import BeardWash from '../media/BeardWash.png';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 const Trackpage = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+        const toggleSidebar = () => {
+            setSidebarOpen(!sidebarOpen);
+        };
+
 return (
     <div className='py-6 px-6'>
         <div className='h-full w-full'>
             <div className='mb-8 pt-4'>
+            <button onClick={toggleSidebar}>
                 <img src={BurgerMenu} alt="" />
+            </button>
+
+            {sidebarOpen && (
+                <div className='fixed top-0 left-0 h-full w-[80px] rounded-[52px] bg-[#03DABB] transition-transform transform translate-x-0'>
+                    <div className='flex items-center justify-center pt-6 pb-32'>
+                        <img src={SmallAlbumImg} alt="" />
+                    </div>
+                    <div className='flex flex-col items-center justify-center gap-8'>
+                        <img src={Mastercard} alt="" />
+                        <img src={ShoppingCart} alt="" />
+                        <img src={LocationSign} alt="" />
+                        <img src={Burger} alt="" />
+                        <img src={Plane} alt="" />
+                        <img src={BeardWash} alt="" />
+                    </div>
+                </div>
+            )}
             </div>
             <div className='flex justify-between place-items-center mb-12'>
                 <Link to="/main">
